@@ -1,48 +1,78 @@
 @import "_colores";
 
-body{
-    background: $colorBody;
+$colores:( colorBody:$colorBody,colorHeader:$colorHeader,colorTitulo:$colorTitulo);
+
+@mixin titulos {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-.text-center text-white{
-    color: $colorTitulo;
-}
 
-.container{
-    h2{
-        text-decoration: underline;
-        color:$colorTitulo;
-    }
-}
 
 body{
+    background: map-get($map: $colores, $key:colorBody);
     header{
-        background-color: $colorHeader !important;
+        background-color: map-get($map: $colores, $key:colorHeader) ;
     }
-}
-
-body{
+    div{
+        h2{
+            @include titulos;
+            color:$colorTitulo;
+        }
+    }
     main{
         section{
             div{
                 div{
                     h1{
-                        text-decoration: underline;
+                        @include titulos;
                         color:$colorTitulo;
                     }
                 }
             }
         }
     }
-}
-
-body{
     div{
         h2{
-            text-decoration: underline;
+            @include titulos;
             color:$colorTitulo;
         }
     }
+}
+
+.text-center text-white{
+    @include titulos;
+    color: $colorTitulo;
+}
+
+.container{
+    h2{
+        @include titulos;
+        color:$colorTitulo;
+    }
+}
+
+.boton{
+    width: 100px;
+    height: 50px;
+    font-size:15px;
+    background-color: white;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    color:black;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.boton--detalles{
+    @extend .boton;
+    background-color: lightseagreen;
+}
+
+.boton--comprar{
+    @extend .boton;
+    background-color: green;
 }
 
 

@@ -2,27 +2,63 @@ body {
   background: linear-gradient(to bottom, #1a1515, white);
 }
 
-.text-center text-white {
-  color: black;
+body header {
+  background-color: #610202;
 }
 
-.container h2 {
+body div h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
   text-decoration: underline;
   color: black;
 }
 
-body header {
-  background-color: #610202 !important;
-}
-
 body main section div div h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
   text-decoration: underline;
   color: black;
 }
 
 body div h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
   text-decoration: underline;
   color: black;
+}
+
+.text-center text-white {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.container h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.boton, .boton--detalles, .boton--comprar {
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  background-color: white;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.boton--detalles {
+  background-color: lightseagreen;
+}
+
+.boton--comprar {
+  background-color: green;
 }
 
 .myForm {
